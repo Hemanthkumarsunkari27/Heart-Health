@@ -3,9 +3,10 @@ services:
     name: heart-health-plus
     env: python
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn app:app"
+    startCommand: "gunicorn app:app"  # Make sure app.py is in /app and Flask app is named "app"
     envVars:
       - key: GEMINI_API
-        value: "AIzaSyC_7MksqbB9P-GCeXrhGgvZPgnSdjoux0U"
+        value: AIzaSyC_7MksqbB9P-GCeXrhGgvZPgnSdjoux0U
       - key: MONGO_DB_URL
-        value: "mongodb+srv://hemu64145:cYl8AmHCFsqxqtd3@cluster0.ak1l4o8.mongodb.net/test?retryWrites=true&w=majority"
+        value: mongodb+srv://hemu64145:cYl8AmHCFsqxqtd3@cluster0.ak1l4o8.mongodb.net/test?retryWrites=true&w=majority
+
